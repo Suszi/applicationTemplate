@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean class="com.web.template.controller.WebController">
+    <bean id="webController" class="com.web.template.controller.WebController">
         <constructor-arg ref="testService"/>
     </bean>
 </beans>

@@ -5,5 +5,5 @@
         http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <import resource="classpath*:/service-application-beans.xml"/>
+    <import resource="classpath*:/common-application-beans.xml"/>
 </beans>
