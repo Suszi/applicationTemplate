@@ -1,5 +1,5 @@
 # Application Template
-##Description
+## Description
 Application template for spring boot web applications
 ## Used technologies
 - JAVA 1.8
