@@ -47,7 +47,7 @@ public class WebControllerTest {
     @Test
     public void testRootShouldReturnWithProperStringWhenCalled() {
         // GIVEN
-        expect(testService.getHelloWorld()).andReturn(EXPECTED_ROOT_MESSAGE).times(2);
+        expect(testService.getHelloWorld()).andReturn(EXPECTED_ROOT_MESSAGE);
         control.replay();
         // WHEN
         String actual = underTest.root();
