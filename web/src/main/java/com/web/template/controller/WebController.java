@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class WebController {
+
     private static final Logger LOGGER = LoggerFactory.getLogger(WebController.class);
     private static final String ROOT_PATH = "/";
     private static final String ACCEPT = "Accept=";
     private static final String APPLICATION_JSON = "application/json";
-    private static final String ACCEPT_APPLICATION_JSON = ACCEPT + APPLICATION_JSON;
 
     private TestService testService;
 
@@ -29,7 +29,7 @@ public class WebController {
         return "Welcome to RestTemplate Example.";
     }
 
-    @RequestMapping(path = ROOT_PATH + "test", method = RequestMethod.GET, headers = ACCEPT_APPLICATION_JSON)
+    @RequestMapping(path = ROOT_PATH + "test", method = RequestMethod.GET)
     @ResponseBody
     String root() {
         LOGGER.info("Root called");

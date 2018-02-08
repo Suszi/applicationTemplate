@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 
 public class TestServiceTest {
+
     private static final String HELLO_WORLD_FROM_TEST_SERVICE = "Hello World from TestService";
 
     private TestService underTest;

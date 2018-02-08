@@ -14,6 +14,7 @@ import static org.testng.Assert.assertEquals;
  * Unit test for {@link WebController}.
  */
 public class WebControllerTest {
+
     private static final String EXPECTED_WELCOME_MESSAGE = "Welcome to RestTemplate Example.";
     private static final String EXPECTED_ROOT_MESSAGE = "Hello World from TestService";
 
