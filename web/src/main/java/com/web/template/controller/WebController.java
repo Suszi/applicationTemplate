@@ -17,21 +17,21 @@ public class WebController {
     private static final String ACCEPT_APPLICATION_JSON = ACCEPT + APPLICATION_JSON;
     private TestService testService;
 
-    public WebController(final TestService testService) {
+    WebController(final TestService testService) {
         this.testService = testService;
     }
 
     @RequestMapping(path = ROOT_PATH)
     @ResponseBody
-    public String welcome() {
+    String welcome() {
         LOGGER.info("WELCOME");
         return "Welcome to RestTemplate Example.";
     }
 
     @RequestMapping(path = ROOT_PATH + "test", method = RequestMethod.GET, headers = ACCEPT_APPLICATION_JSON)
     @ResponseBody
-    public String root() {
+    String root() {
         LOGGER.info("ROOT", testService.getHelloWorld());
-        return "Hello World";
+        return testService.getHelloWorld();
     }
 }
