@@ -21,13 +21,14 @@ public class WebController {
         this.testService = testService;
     }
 
-    @RequestMapping(ROOT_PATH)
+    @RequestMapping(path = ROOT_PATH)
+    @ResponseBody
     public String welcome() {
         LOGGER.info("WELCOME");
         return "Welcome to RestTemplate Example.";
     }
 
-    @RequestMapping(value = ROOT_PATH + "test", method = RequestMethod.GET, headers = ACCEPT_APPLICATION_JSON)
+    @RequestMapping(path = ROOT_PATH + "test", method = RequestMethod.GET, headers = ACCEPT_APPLICATION_JSON)
     @ResponseBody
     public String root() {
         LOGGER.info("ROOT", testService.getHelloWorld());
