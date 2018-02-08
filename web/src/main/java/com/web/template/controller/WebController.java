@@ -13,8 +13,6 @@ public class WebController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(WebController.class);
     private static final String ROOT_PATH = "/";
-    private static final String ACCEPT = "Accept=";
-    private static final String APPLICATION_JSON = "application/json";
 
     private TestService testService;
 
